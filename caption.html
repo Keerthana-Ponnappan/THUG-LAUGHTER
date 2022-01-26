@@ -302,17 +302,11 @@
 
 <!-- script for templates-->
       <script>
-            window.onload{
-                var queryString = decodeURIComponent(window.location.search);
-                queryString = queryString.substring(1);
-                alert('queryString')
-            }
             function change_img(ID){
-                document.getElementById("c_img").src = document.getElementById(ID).src
-            }
-            function chg_img(ID){
-                document.getElementById("c_img").src = ID
-            }
+
+            var img_id = document.getElementById("c_img")
+            document.getElementById("c_img").src = document.getElementById(ID).src
+      }
       </script>
 <!-- script for setting -->
         <script>
