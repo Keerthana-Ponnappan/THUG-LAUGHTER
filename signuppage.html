@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>THUG LAUGHTER</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet"  href="style.css" >
+</head>
+<body>
+<header>
+    <div>
+        <img class="img-responsive img-thumbnail" src="images/THUG.png" width=100 height=100>
+        <span id='title'> THUG LAUGHTER</span>
+    </div><br>
+    <nav class="navigation ">
+               <ul class="nav nav-light navbar-left nav-pills  navbar-custom ">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="caption.html">Create</a></li>
+                        <li class='active'><a href="signuppage.html">Sign up</a></li>
+                        <li><a href="loginpage.html">Sign in</a></li>
+                        <li><a href="contact.html">Contact us</a></li>
+                    </ul>
+    </nav>
+
+</header>
+
+
+<main>
+<div id='signup'>
+    <div id="fm" style="padding-top:100px;">
+        <h2>Register With Us</h2>
+        <div class="fom">
+            <label for="username">Username*</label>
+            <input id='Name' type="text" id="username" placeholder="Enter Username">
+        </div>
+        <div class="fom">
+            <label for="email">Email*</label>
+            <input id='Email' type="text" id="email" placeholder="Enter email">
+        </div>
+        <div class="fom">
+            <label for="password">Password*</label>
+            <input id='Password1' type="password" id="password" placeholder="Enter password">
+        </div>
+        <div class="fom">
+            <label for="password2">Confirm Password*</label>
+            <input id='Password2'type="password" id="password2" placeholder="Enter password again">
+        </div>
+        <small id='errorMsg'></small>
+        <button id='submit' onclick='validate()'>Submit</button>
+    </div>
+
+</div>
+
+
+</main>
+
+
+
+<footer id ='footer' ><br>
+            <nav>
+                    <ul class="nav navbar-nav navbar-left navbar-custom footerlist">
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="#">ABOUT US</a></li>
+                        <li><a href="template.html">TEMPLATES</a></li>
+                        <li><a href="caption.html">CREATE</a></li>
+                        <li><a href="contact.html">CONTACT US</a></li>
+                    </ul>
+                    <ul class="list-inline" >
+                        <li><a href="javascript:poppage('fb')"><span class="fa fa-facebook-square fa-2x"></span></a> </li>
+                        <li><a href="javascript:poppage('tr')"><span class="fa fa-twitter-square fa-2x"></span></a> </li>
+                        <li><a href="javascript:poppage('ig')"><span class="fa fa-instagram fa-2x"></span></a> </li>
+                    </ul>
+            </nav>
+</footer>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script>
+function validate(){
+var name = document.getElementById("Name").value;
+var email = document.getElementById("Email").value;
+var password1 = document.getElementById("Password1").value;
+var password2 = document.getElementById("Password2").value;
+
+	if (name == "" ||email == "" || password1 == "" || password2 == "") {
+		document.getElementById("errorMsg").innerHTML = "Please fill the required fields"
+		return false;
+	}
+    if (password1.length<8){
+        document.getElementById("errorMsg").innerHTML = "Your password must include atleast 8 characters"
+        return false;
+    }
+    if(password2 != password1){
+        document.getElementById("errorMsg").innerHTML = " Comfirm your passwords are same "
+        return false;
+    }
+    else{
+    window.location = "caption.html";
+    }
+}
+</script>
+</body>
+</html>
