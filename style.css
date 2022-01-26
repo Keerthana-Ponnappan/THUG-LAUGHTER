@@ -72,8 +72,8 @@ nav{
   position:absolute;
   border:1px solid back;
   margin:1px;
-  top:0px;
-  left:0px;
+  bottom:0px;
+  right:0px;
   z-index:2;
 
 
