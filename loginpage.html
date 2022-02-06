@@ -33,11 +33,11 @@
 
     <div id='fm'>
         <div class="frm" >
-            <input id='username' value='' type="email" placeholder="Username" required>
+            <input id='username_l' value='' type="email" placeholder="Username" required>
         </div>
 
         <div class="frm">
-            <input id='password' value='' type="password" placeholder="Password" required>
+            <input id='password_l' value='' type="password" placeholder="Password" required>
         </div>
 
         <div class="frm" >
@@ -70,8 +70,8 @@
 var attempt = 3; // Variable to count number of attempts.
 // Below function Executes on click of login button.
 function validate(){
-var username = document.getElementById("username").value;
-var password = document.getElementById("password").value;
+var username = document.getElementById("username_l").value;
+var password = document.getElementById("password_l").value;
 
 if ( username == "keerthan" && password == "forget@123"){
     alert ("Login successfully");
@@ -83,8 +83,8 @@ else{
     alert("You have left "+attempt+" attempt;");
 // Disabling fields after 3 attempts.
     if( attempt == 0){
-        document.getElementById("username").disabled = true;
-        document.getElementById("password").disabled = true;
+        document.getElementById("username_l").disabled = true;
+        document.getElementById("password_l").disabled = true;
         document.getElementById("submit").disabled = true;
         return false;
     }
