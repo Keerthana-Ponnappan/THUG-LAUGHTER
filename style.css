@@ -123,6 +123,7 @@ nav{
 .row{
     margin-right:auto;
     display:flex;
+    flex-wrap:wrap;
 
 }
 .col{
