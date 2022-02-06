@@ -332,6 +332,6 @@ nav{
   border-radius: 25px;
   box-shadow: 0 4px #000000;
 }
-#Name,#Email,#Password1,#Password2,#username,#password{
+#Name,#Email,#Password1,#Password2,#username_l,#password_l{
 color:black;
 }
